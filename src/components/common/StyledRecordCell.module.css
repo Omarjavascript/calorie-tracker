@@ -1,0 +1,31 @@
+.styled-record-cell {
+  background-color: white;
+  border: 3px solid #012367;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+}
+button {
+  background-color: #007bff; /* أزرق */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer; /* شكل اليد */
+  transition: background 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+  background-color: #0056b3; /* أزرق أغمق عند hover */
+}
+
+button:disabled {
+  background-color: #ccc; /* رمادي */
+  color: #666;
+  cursor: not-allowed; /* شكل ممنوع 🚫 */
+  opacity: 0.7;
+}

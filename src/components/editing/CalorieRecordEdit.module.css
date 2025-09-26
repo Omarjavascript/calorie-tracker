@@ -1,0 +1,94 @@
+.form {
+  display: grid;
+  grid-template-columns: auto 1fr; /* العمود الأول للـ label والثاني للـ input */
+  gap: 12px 16px; /* مسافة بين الصفوف والأعمدة */
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9fcff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* أول label (العنوان) يمتد على العمودين */
+.form > label:first-child {
+  grid-column: 1 / -1;
+  font-weight: bold;
+  text-align: center;
+  color: #012367;
+  margin-bottom: 10px;
+}
+
+/* الزر في الأسفل يمتد على العمودين */
+.form button {
+  grid-column: 1 / -1;
+  justify-self: center; /* وسط الزر */
+  width: 50%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #2980b9;
+}
+
+/* إدخال خطأ */
+.error-value {
+  border: 2px solid red;
+  background: #ffeaea;
+}
+
+/* موبايل */
+@media (max-width: 600px) {
+  .form {
+    grid-template-columns: 1fr; /* عمود واحد */
+  }
+
+  .form button {
+    width: 100%;
+  }
+}
+
+.last form button:last-child {
+  border-bottom: none;
+}
+.styled-record-cell {
+  background-color: white;
+  border: 3px solid #012367;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 20px;
+}
+.cancel-btn {
+  background-color: #0077b6;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.form-input {
+  background-color: var(--theme-background-light);
+  color: var(--theme-color-normal);
+  border: 1px solid var(--theme-color-normal);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 255px;
+  font-size: 16px;
+  display: block;
+  box-sizing: border-box;
+}
